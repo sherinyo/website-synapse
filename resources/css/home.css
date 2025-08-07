@@ -1,0 +1,184 @@
+
+#banner{
+    background-color: #D9D9D9;
+    width: auto;
+    height: 50vh;
+    margin-bottom: 16vh;
+}
+#tentangKamiContainer{
+    background-color: white;
+    width: auto;
+    height: 35vh;
+    margin: 0px 150px 16vh 150px;
+    display: flex;
+    align-items: center;
+}
+#logoTentangKami{
+    height: 110%;
+}
+#penjelasanContainer{
+    background-color: white;
+    height: 90%;
+    width: 60%;
+}
+#penjelasanContainer h1, #penjelasanContainer h2, #penjelasanContainer h3{
+    margin: 0px 0px 0.5% 0px;
+    color: #344EAD;
+    font-family: poppins;
+}
+#penjelasanContainer h1{
+    font-weight: 800;
+}
+#penjelasanContainer h2{
+    font-weight: normal;
+}
+#penjelasanContainer h3{
+    font-weight: normal;
+    font-size: 20px;
+}
+#selengkapnyaTK{
+    margin: 4% 0px 0px 0px;
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 15px;
+    color: white;
+    background-color: #344EAD;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+#selengkapnyaTK:hover{
+    background-color: #2B3D95;
+}
+#judulInfo{
+    text-align: center;
+    font-family: poppins;
+    color: #344EAD;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#subJudulInfo{
+    text-align: center;
+    font-family: poppins;
+    font-weight: normal;
+    margin-top: 10px;
+}
+#infoContainer{
+    background-color: white;
+    width: auto;
+    height: 47vh;
+    margin: 10vh 150px 16vh 150px;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+.kotakInfo{
+    background-color: white;
+    height: auto;
+    width: 22%;
+    border-radius: 25px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+    padding: 0px 25px;
+    box-sizing: border-box;
+}
+.badgeIMG{
+    height: 25%;
+    text-align: center;
+    display: block;
+    margin: 60px auto 40px;
+}
+.judulInfo2{
+    font-family: poppins;
+    color: #1C4CE1;
+    font-weight: bold;
+    font-size: 20px;
+}
+.subJudulInfo2{
+    font-family: poppins;
+    font-weight: normal;
+    font-size: 17px;
+}
+.heading{
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 55px;
+    color: #334EAC;
+    margin: 0px 150px 4vh 150px;
+}
+#beritaContainer{
+    background-color: white;
+    width: auto;
+    height: 60vh;
+    margin: 0px 150px 16vh;
+    display: flex;
+    justify-content: space-between;
+}
+.kotakBerita{
+    height: auto;
+    width: 30%;
+    background-color: #F7F2EB;
+    border-radius: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 23px rgba(0, 0, 0, 0.25);
+}
+.fotoBerita{
+    width: auto;
+    height: 45%;
+    background-color: #D9D9D9;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.typeBerita{
+    font-family: inter;
+    font-size: 17px;
+    font-weight: 800;
+    color: #F7F2EB;
+    background-color: #334EAC;
+    text-align: center;
+    margin: 15px 75% 0px 15px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.judulBerita{
+    margin: 17px 15px 0px 15px;
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1C4CE1;
+}
+.tombolBerita{
+    width: calc(100% - 30px);
+    margin: 8% 15px 0px 15px;
+    font-family: poppins;
+    font-weight: 300;
+    background-color: #081F5C;
+    color: #F7F2EB;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 8px 0px;
+}
+#kotak{
+    background-color: #D9D9D9;
+    width: auto;
+    height: 60vh;
+    margin: 0px 150px 16vh;
+}
+#videoContainer{
+    width: auto;
+    height: 50vh;
+    margin: 0px 31% 0px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
+}
+#judulVideo{
+    font-family: poppins;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    margin: 20px 0px 16vh;
+}
