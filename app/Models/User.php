@@ -18,9 +18,7 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'confirm_password', 'role', 'status_delete'
     ];
 
     /**
@@ -32,6 +30,16 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+   public function synapointRequests()
+    {
+        return $this->hasMany(SynapointRequests::class);
+    }
+
+    public function synapointHistories()
+    {
+        return $this->hasMany(SynapointHistories::class);
+    }
 
     /**
      * Get the attributes that should be cast.
