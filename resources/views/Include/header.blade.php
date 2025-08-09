@@ -35,36 +35,26 @@
 
         <!-- Tombol Login / Info Pengguna -->
         <div class="text-center mt-3 mt-lg-0">
-             @auth
-            <div class="d-flex align-items-center gap-2">
-                    <span class="fw-bold" style="color: #081F5C;">
-                        {{ Auth::user()->first_name }} ({{ Auth::user()->points }} pts)
-                    </span>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="btn btn-sm rounded-pill" style="background-color: #081F5C; color: #F2F0DE;">
-                            Logout
-                        </button>
-                    </form>
-                </div>
-
-            {{-- <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                @auth
+                    {{-- Blok ini akan dijalankan JIKA PENGGUNA SUDAH LOGIN --}}
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold" style="color: #F2F0DE;">
+                            {{ Auth::user()->nama }} {{-- Menggunakan kolom 'nama' yang benar --}}
+                        </span>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-sm rounded-pill" style="background-color: #D94141; color: #F2F0DE;">
+                                Logout
+                            </button>
+                        </form>
+                    </div>
+                @else
+                    {{-- Blok ini akan dijalankan JIKA PENGGUNA BELUM LOGIN --}}
+                    <a href="{{ url('/login') }}" class="btn px-4 rounded-pill" style="color: #F2F0DE; background-color:#081F5C;">
+                        Login/Sign In
+                    </a>
+                @endauth {{-- Ini adalah penutup yang paling penting --}}
             </div>
-            </div> --}}
-            @else
-                <a href="{{ url('/login') }}" class="btn px-4 rounded-pill"
-                style="background-color: #081F5C; color:#F2F0DE;">
-                    Login/Sign In
-                </a>
-        @endauth
-        </div>
         </div>
     </div>
 </nav>

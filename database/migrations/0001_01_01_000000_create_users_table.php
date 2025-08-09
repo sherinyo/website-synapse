@@ -17,11 +17,7 @@ return new class extends Migration
             $table->string('Email')->unique();
             $table->string('Password');
             $table->enum('Role', ['admin', 'user'])->default('user');
-            $table->timestamp('email_verified_at')->nullable()->comment('Menggantikan IsVerified');
-            $table->string('VerificationToken')->nullable();
-            $table->timestamp('TokenExpires')->nullable();
             $table->softDeletes('Status_Delete');
-            $table->rememberToken();            
             $table->timestamps();
         });
 

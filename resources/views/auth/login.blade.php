@@ -23,7 +23,7 @@
             <!-- Email -->
             <div class="mb-3">
               <label for="email" class="form-label" style="color: #081F5C;">Email</label>
-              <input type="email" name="email" id="email" class="form-control px-3 py-2 @error('email') is-invalid" required autofocus value="{{ old }}">
+              <input type="email" name="email" id="email" class="form-control px-3 py-2 @error('email') is-invalid" required autofocus value="{{ old('email') }}">
               @error('email')
                 <div class="invalid-feedback">
                   {{ $message }}
