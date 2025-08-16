@@ -78,7 +78,7 @@
                     <a href="{{ route('admin.homeAdmin') }}" class="{{ request()->routeIs('admin.homeAdmin') ? 'active' : '' }}">
                         <i class="bi bi-grid-1x2-fill"></i> Dashboard
                     </a>
-                    <a href="{{ url('admin.beritaAdmin') }}" class="{{ request()->is('admin.beritaAdmin') ? 'active' : '' }}">
+                    <a href="{{ route('admin.news.index') }}" class="{{ request()->routeIs('admin.news.index') ? 'active' : '' }}">
                         <i class="bi bi-newspaper"></i> Berita
                     </a>
                     <a href="{{ url('admin.synapoint') }}" class="{{ request()->is('admin.synapoint*') ? 'active' : '' }}">
@@ -113,5 +113,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    @stack('scripts')
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\ProfileController;
 
@@ -27,9 +28,8 @@ Route::get('/synapoint', function () {
     return view('users.synapoint');
 });
 
-Route::get('/berita', function () {
-    return view('users.berita');
-});
+Route::get('/berita', [NewsController::class, 'showPublicList'])->name('news.public.index');
+Route::get('/berita/{news}', [NewsController::class, 'showPublicDetail'])->name('news.public.show');
 
 Route::get('/detail-di', function () {
     return view('users.detail-di');
@@ -58,6 +58,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/homeAdmin', [PodcastController::class, 'index'])->name('admin.homeAdmin');
         Route::post('/podcasts', [PodcastController::class, 'store'])->name('podcast.store');
         Route::delete('/podcasts/{podcast}', [PodcastController::class, 'destroy'])->name('podcast.destroy');
+    
+        //news
+        Route::get('/berita', [NewsController::class, 'index'])->name('admin.news.index');
+        Route::post('/berita', [NewsController::class, 'store'])->name('admin.news.store');
+        Route::delete('/berita/{id}', [NewsController::class, 'destroy'])->name('admin.news.destroy');
+        Route::put('/berita/{id}', [NewsController::class, 'update'])->name('admin.news.update');
+        Route::post('/berita/{id}/restore', [NewsController::class, 'restore'])->name('admin.news.restore');
     });
 
     // --- Rute Pengguna Biasa ---
