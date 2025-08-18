@@ -62,7 +62,6 @@
                     </a>
                 @endif
             </div>
-
         </div>
     </div>
 </nav>

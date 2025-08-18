@@ -6,7 +6,6 @@
 <section style="min-height: 100vh; background-color: #F2F0DE; display: flex; align-items: center;">
   <div class="container">
     <div class="row justify-content-center">
-
       <div class="col-md-6 col-lg-5">
         <div style="background-color: #ffffff; border-radius: 20px; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
 
@@ -41,14 +40,12 @@
                 </div>
               @endif
             </div>
-
             <div class="d-grid mt-4">
               <button type="submit" class="btn py-2 fw-semibold" style="background-color: #081F5C; color: #F2F0DE;">
                 Login
               </button>
             </div>
           </form>
-
           <div class="text-center mt-4">
             <p style="color: #3a3a3a;">Belum punya akun? <a href="{{ route('register') }}" style="color: #2E3192; font-weight: 600;">Daftar di sini</a></p>
           </div>

@@ -221,34 +221,40 @@
 
 
 <!-- SECTION: BERITA -->
-<div class="container mt-5">
-  <h1 class="heading">BERITA</h1>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="berita-card">
-        <div class="foto"></div>
-        <h6>Event</h6>
-        <h5>EPIC Nasional 2025 Sukses diselenggarakan oleh Student Union ISB</h5>
-        <button>Selengkapnya</button>
-      </div>
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold" style="color: #1C4CE1;">BERITA</h1>
     </div>
-    <div class="col-md-4">
-      <div class="berita-card">
-        <div class="foto"></div>
-        <h6>Event</h6>
-        <h5>EPIC Nasional 2025 Sukses diselenggarakan oleh Student Union ISB</h5>
-        <button>Selengkapnya</button>
-      </div>
+    
+    <div class="row">
+        @forelse ($latestNews as $newsItem)
+            <div class="col-md-6 col-lg-4 mb-4">
+                {{-- Menggunakan komponen Card Bootstrap --}}
+                <div class="card h-100 shadow-sm border-0 rounded-4">
+                    <a href="{{ route('news.public.show', $newsItem->id) }}">
+                        <img src="{{ $newsItem->gambar ? asset('images/news/' . $newsItem->gambar) : 'https://via.placeholder.com/400x250.png?text=Synapse' }}" 
+                             class="card-img-top" 
+                             alt="{{ $newsItem->nama }}" 
+                             style="height: 200px; object-fit: cover; border-top-left-radius: inherit; border-top-right-radius: inherit;">
+                    </a>
+                    
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="card-subtitle mb-2 text-muted text-uppercase">{{ $newsItem->role }}</h6>
+                        <h5 class="card-title fw-bold flex-grow-1">
+                            <a href="{{ route('news.public.show', $newsItem->id) }}" class="text-decoration-none text-dark">
+                                {{ Str::limit($newsItem->nama, 55) }}
+                            </a>
+                        </h5>
+                        <a href="{{ route('news.public.show', $newsItem->id) }}" class="btn btn-primary mt-3" style="background-color: #1C4CE1; border-color: #1C4CE1;">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        @empty
+            <div class="col-12">
+                <p class="text-center text-muted">Belum ada berita untuk ditampilkan.</p>
+            </div>
+        @endforelse
     </div>
-    <div class="col-md-4">
-      <div class="berita-card">
-        <div class="foto"></div>
-        <h6>Event</h6>
-        <h5>EPIC Nasional 2025 Sukses diselenggarakan oleh Student Union ISB</h5>
-        <button>Selengkapnya</button>
-      </div>
-    </div>
-  </div>
 </div>
 
 {{-- PODCAST --}}

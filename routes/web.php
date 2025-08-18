@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\ProfileController;
 // --- Rute Publik (Tidak memerlukan login) ---
 // Rute ini dapat diakses oleh semua pengguna.
 // Rute '/' akan memanggil controller untuk mengambil data podcast.
-Route::get('/', [PodcastController::class, 'showUserHome']);
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
 Route::get('/tentangkami', function () {
     return view('users.tentangkami');
@@ -41,7 +42,6 @@ Route::get('/detail-di', function () {
 Route::middleware('guest')->group(function () {
     Route::get('/signup', [AuthController::class, 'showRegistrationForm'])->name('register');
     Route::post('/signup', [AuthController::class, 'register']);
-
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [AuthController::class, 'login']);
 });

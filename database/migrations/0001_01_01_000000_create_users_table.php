@@ -9,6 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
+<<<<<<< HEAD
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
@@ -20,6 +21,14 @@ return new class extends Migration
             $table->dateTime('TokenExpires')->nullable();
             $table->boolean('Status_Delete')->default(false);
             $table->rememberToken();
+=======
+            $table->id('ID');
+            $table->string('Nama');
+            $table->string('Email')->unique();
+            $table->string('Password');
+            $table->enum('Role', ['admin', 'user'])->default('user');
+            $table->softDeletes('Status_Delete');
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5
             $table->timestamps();
         });
 

@@ -2,7 +2,6 @@
 
 @section('title', 'Synapoint')
 @section('content')
-
 <!-- Banner -->
   <section style="background-color: #d9d9d9; height:400px; margin-bottom:60px;">
   </section>
@@ -68,10 +67,8 @@
             </div>
         </form>
         </div>
-    </div>
         </div>
-
-
+        </div>
         </div>
       </div>
     </div>
@@ -140,8 +137,13 @@
           </div>
           <div>
             <h5 class="fw-bold" style="color: #3A4BA4;">Kumpulkan Synapse Point</h5>
+<<<<<<< HEAD
             <p class="mb-3">Untuk setiap penukaran kegiatan ke dalam bentuk Synapse Point wajib melalui form website ini. Pastikan semua data yang kamu masukkan sudah benar dan lengkap ya.</p>
             <a href="#" class="btn btn-primary btn-sm">Input Point</a>
+=======
+            <p class="mb-3">Untuk setiap penukaran kegiatan ke dalam bentuk Synapse Point wajib melalui Google Form yang disediakan. Pastikan semua data yang kamu masukkan sudah benar dan lengkap ya.</p>
+            <a href="#" class="btn btn-primary btn-sm">Google Form Pengumpulan Poin</a>
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5
           </div>
         </div>
       </div>
@@ -168,7 +170,11 @@
           <div>
             <h5 class="fw-bold" style="color: #3A4BA4;">Cek Jumlah Synapse Point</h5>
             <p class="mb-3">Kamu bisa melihat jumlah Synapse Point yang kamu kumpulkan kapan saja melalui Google Sheet publik yang kami sediakan. Sheet ini akan selalu diperbarui secara berkala.</p>
+<<<<<<< HEAD
             <a href="#" class="btn btn-primary btn-sm">Cek Point</a>
+=======
+            <a href="#" class="btn btn-primary btn-sm">Public Sheets</a>
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5
           </div>
         </div>
       </div>
@@ -182,12 +188,20 @@
           <div>
             <h5 class="fw-bold" style="color: #3A4BA4;">Tukarkan Synapse Point</h5>
             <p class="mb-3">Untuk setiap klaim atau penggunaan poin, kamu wajib mengisi formulir yang sudah kami sediakan. Pastikan semua data yang kamu masukkan sudah benar ya.</p>
+<<<<<<< HEAD
             {{-- <a href="#" class="btn btn-primary btn-sm">Google Form Penukaran Poin</a> --}}
+=======
+            <a href="#" class="btn btn-primary btn-sm">Google Form Penukaran Poin</a>
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<<<<<<< HEAD
 
 @endsection
+=======
+@section('content')
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5

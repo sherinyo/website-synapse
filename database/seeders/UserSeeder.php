@@ -5,7 +5,11 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+<<<<<<< HEAD
 use Illuminate\Support\Str; // Tambahkan ini jika Anda ingin menggunakan Str::random()
+=======
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5
 
 class UserSeeder extends Seeder
 {
@@ -15,6 +19,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
+<<<<<<< HEAD
             [
                 'name' => 'Digital Innovation',
                 'email' => 'isbdigitalinnovation@gmail.com',
@@ -42,5 +47,24 @@ class UserSeeder extends Seeder
                 'updated_at' => now(),
             ],
         ]);
+=======
+        [
+            'nama' => 'Digital Innovation',
+            'email' => 'isbdigitalinnovation@gmail.com',
+            'password' => Hash::make('isbmantap'),
+            'role' => 'admin',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'nama' => 'Sherin Yonatan',
+            'email' => 'sherinkeren@gmail.com',
+            'password' => Hash::make('sherin123'),
+            'role' => 'user',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+    ]);
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5
     }
 }

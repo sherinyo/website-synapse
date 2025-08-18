@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('podcasts', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->string('name', 255)->nullable();
             $table->string('link', 500)->nullable();
             $table->string('status_delete', 1)->default('0');
+=======
+            $table->string('nama_podcast', 255)->nullable();
+            $table->string('link_podcast', 500)->nullable();
+            $table->string('status_delete', 1)->default('0'); // 0 = aktif, 1 = delete
+>>>>>>> 0765034083270b2918ff2456abd14a60add00fc5
             $table->timestamps();
         });
     }

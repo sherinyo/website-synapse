@@ -149,4 +149,14 @@ class NewsController extends Controller
         // Variabel $news sudah berisi data berita yang diminta.
         return view('users.detailBerita', ['newsItem' => $news]);
     }
+
+    public function showForHomepage()
+    {
+        $latestNews = News::latest() 
+                        ->take(3) 
+                        ->get();
+        return view('users.home', [
+            'latestNews' => $latestNews,
+        ]); 
+    }
 }

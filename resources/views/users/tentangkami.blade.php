@@ -202,7 +202,7 @@
                 <p>Bertanggung jawab dalam hal keuangan dan pengelolaan dana</p>
                 <a href="{{ url('/detail-di') }}">
                     <button class="btn dep-btn mt-auto w-100">Selengkapnya</button>
-                </a>
+                </a>            
             </div>
         </div>
         <div class="col">

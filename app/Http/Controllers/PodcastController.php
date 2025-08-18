@@ -38,28 +38,4 @@ class PodcastController extends Controller
         $podcast->delete();
         return redirect()->route('admin.homeAdmin')->with('success', 'Podcast berhasil dihapus!');
     }
-
-    // Menampilkan halaman home user dengan podcast terakhir
-    public function showUserHome()
-    {
-        $latestPodcast = Podcasts::latest()->first();
-
-        if ($latestPodcast) {
-            // Find the video ID from the regular YouTube URL
-            $videoId = null;
-            if (preg_match('/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/i', $latestPodcast->link, $matches)) {
-                $videoId = $matches[1];
-            }
-
-            // If a video ID is found, format it into the embed URL
-            if ($videoId) {
-                $latestPodcast->embed_link = "https://www.youtube.com/embed/{$videoId}";
-            } else {
-                // Fallback if the link is not a valid YouTube video
-                $latestPodcast->embed_link = $latestPodcast->link;
-            }
-        }
-
-        return view('users.home', ['latestPodcast' => $latestPodcast]);
-    }
 }
